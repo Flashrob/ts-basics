@@ -5,9 +5,9 @@ export const Form = ({
   setInputValue,
   createTodo,
 }: {
-  inputValue: any;
+  inputValue: string;
   setInputValue: Dispatch<SetStateAction<string>>;
-  createTodo: () => any;
+  createTodo: () => void;
 }) => {
   return (
     <>

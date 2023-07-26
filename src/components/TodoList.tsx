@@ -1,4 +1,4 @@
-export const TodoList = ({ todos }: any) => {
+export const TodoList = ({ todos }: { todos: { title: string }[] }) => {
   return (
     <>
       {todos.map((todo) => (
