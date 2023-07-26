@@ -3,19 +3,20 @@ import './App.css';
 import { Form } from './components/Form';
 import { TodoList } from './components/TodoList';
 
-const makeTodo = (title: string): { title: string } => {
+export type Todo = {
+  title: string;
+};
+
+const makeTodo = (title: string): Todo => {
   return { title };
 };
 
-const makeNewTodos = (
-  todos: { title: string }[],
-  newTodo: { title: string },
-): { title: string }[] => {
+const makeNewTodos = (todos: Todo[], newTodo: Todo): Todo[] => {
   return [...todos, newTodo];
 };
 
 function App() {
-  const [todos, setTodos] = useState<{ title: string }[]>([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
   const [inputValue, setInputValue] = useState<string>('');
 
   const createTodo = () => {

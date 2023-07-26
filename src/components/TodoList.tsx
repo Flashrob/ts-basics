@@ -1,4 +1,6 @@
-export const TodoList = ({ todos }: { todos: { title: string }[] }) => {
+import type { Todo } from '../App';
+
+export const TodoList = ({ todos }: { todos: Todo[] }) => {
   return (
     <>
       {todos.map((todo) => (
